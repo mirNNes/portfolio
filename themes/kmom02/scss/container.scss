@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    border: 0 none;
+    margin: 0.6em;
+    padding: 0;
+}
+
+ol, ul {
+    padding-left: 1.5em;
+}
+
+.hidden {
+    display: none !important;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* Placement */
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    display: flex;
+    justify-content: center; /* Centrera horisontellt */
+    align-items: center; /* Centrera vertikalt */
+    flex-direction: column; /* Om du har flera element och vill att de ska staplas vertikalt */
+}
+.header, .footer {
+    flex: 0 0 auto;
+}
+
+/* Header */
+
+.header, .site-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+/* Title */
+
+.title, .logo {
+    padding: 3em 3em 3em 0;
+}
+
+@media (max-width: 767px) {
+    .title, .logo {
+        padding: 1em 1em 1em 0;
+        display: flex; /* Gör det till ett flex-container */
+        justify-content: center; /* Centrera innehållet horisontellt */
+        align-items: center; /* Centrera innehållet vertikalt */
+    }
+    .title {
+        min-width: 50%;
+    }
+    .logo {
+        max-width: 10%;
+    }
+}
+
+.title * {
+    color: #f6f2f2;
+}
+
+.title p {
+    font-style: italic;
+}
+
+/* Footer */
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 5px solid #010101;
+}
+
+.footer a {
+    color: #ff0000; /* Ändra till önskad färg */
+    text-decoration: none;
+}
+
+.footer .social {
+    font-size: 2rem;
+    margin-right: 20px; /* Justera värdet efter behov */
+}
+
+.footer .social i {
+    color: #0e0d0d; /* Ändra till önskad färg */
+    margin-left: 10px; /* Lägg till lite avstånd mellan ikoner om det behövs */
+    vertical-align: middle; /* Justera vertikalt om det behövs */
+}
+
+p, td, th, li, dd {
+    text-align: justify;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.6em;
+    font-weight: bold;
+}
+
+img {
+    max-width: 100%;
+    height: auto;    /* Bevarar bildens proportioner */
+    max-height: 400px; 
+}
+
+.header {
+    background-color: #630404; /* Grön färg */
+    color: white; /* Vit textfärg */
+    padding: 0em; /* Lägg till lite padding för att ge utrymme */
+}
+.nav a {
+    color: #fdf8f8; /* Ändra till önskad färg */
+    text-decoration: none; /* Tar bort understrykning */
+}
+
+.nav a:hover {
+    color: #f3efed; /* Ändra färg vid hover */
+}
+
+.nav li.active a {
+    color: #f2f8f2; /* Färg för den aktiva sidan, ändra till önskad färg */
+}
+.parkinsans-custom {
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; // eller 300, 700, etc.
+    font-style: normal;
+}

@@ -1,0 +1,16 @@
+@use '@fortawesome/fontawesome-free/scss/fontawesome' as fa;
+@use '@fortawesome/fontawesome-free/scss/brands' as brands;
+@use '@fortawesome/fontawesome-free/scss/solid' as solid;
+@use '@fortawesome/fontawesome-free/scss/regular' as regular;
+
+$fa-font-path: 'node_modules/@fortawesome/fontawesome-free/webfonts';
+
+@use 'normalize.css/normalize' as normalize;
+@use 'variables' as vars;
+@use 'typography' as typo;
+@use 'container' as container;
+@use 'blockquotes' as blockquotes;
+@use 'code' as code;
+
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Play:wght@400;700&display=swap');
+
