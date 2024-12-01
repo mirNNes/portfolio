@@ -1,0 +1,13 @@
+Då tittar vi på kmom03 med CSS-grid/flexbox.
+
+Jag tittar på me/portfolio/report och kmom03 sidan för att se hur de blev och att du följer de wireframes som fanns till uppgiften.
+
+Jag kollar över dina SASS-filer för att se hur du löst uppgiften och dubbelkollar att de går igenom våran lint, "npm run lint".
+
+Jag läser igenom din redovisningstext.
+
+Jag kikar även på ditt repo på GitHub för att se så att commits och taggar är på plats.
+
+Halva kursen avklarade, bra jobbat. Snart är det julledighet, kämpa på!
+
+$TEACHER_SIGNATURE

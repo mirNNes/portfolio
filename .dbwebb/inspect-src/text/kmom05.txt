@@ -1,0 +1,15 @@
+Då tittar vi på kmom05 och bilder.
+
+Jag tittar på me/portfolio och ditt galleri.
+
+Jag kollar över så att ditt grid är responsivt, att dina bilder använder sig av srcset och att bilderna är optimerade för sitt syfte.
+
+Jag läser igenom din utvärdering av webbplatsers laddningstid, alltid kul att se vilka sidor studenterna har valt.
+
+Jag kollar på redovisningstexten för att se hur det gick för dig.
+
+Jag vill se att taggar och commits finns på plats i ditt GitHub.
+
+Kämpa på.
+
+$TEACHER_SIGNATURE

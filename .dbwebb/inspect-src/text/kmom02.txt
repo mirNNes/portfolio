@@ -1,0 +1,13 @@
+Då tittar vi kmom02 med SASS.
+
+Jag tittar på din me/portfolio för att se att ditt SASS-tema fungerar som det ska. Jag kollar så att du laddar in en egen font samt ikoner via Font Awesome. Jag kollar även så att normalize.css är inladdat.
+
+Jag kollar så att dina SASS-filer går igenom våran lint, "npm run lint".
+
+Jag läser igenom din redovisningstext.
+
+Jag kikar på ditt repo på GitHub för att se att commits och taggar är på plats.
+
+Gott kämpat så här långt, kör på.
+
+$TEACHER_SIGNATURE
