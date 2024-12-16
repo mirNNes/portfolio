@@ -1,0 +1,28 @@
+{% include 'incl/header.twig' %}
+
+<body>
+    {% include 'incl/nav.twig' %}
+
+    <div class="main" role="main">
+        <div class="flex-container"> <!-- Lägg till en wrapper för flexbox -->
+<aside class="sidebar">
+    <nav>
+        <ul>
+            {% for page in pages %}
+                {% if page.title in ['CSS', 'GIT', 'HTML', 'JAVASCRIPT', 'PHP', 'PYTHON', 'SQLITE'] %}
+                    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
+</aside>
+                <section class="content">
+                <h1>{{ title }}</h1>
+                {{ content }}
+            </section>
+    </div>
+
+    {% include 'incl/footer.twig' %}
+</body>
+
+</html>

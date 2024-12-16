@@ -1,11 +1,7 @@
 ##
 # Basic
 #
-<<<<<<< HEAD
 site_title: Mirnes portfolio               # The title of your website
-=======
-site_title: Design v3               # The title of your website
->>>>>>> 02c4516 (Example portfolio now working with validation and on student server)
 base_url: ~                         # Pico will try to guess its base URL, if this fails, override it here;
                                     #     Example: https://example.com/pico/
 rewrite_url: ~                      # A boolean (true or false) indicating whether URL rewriting is forced
@@ -15,11 +11,7 @@ timezone: ~                         # Your PHP installation might require you to
 ##
 # Theme
 #
-<<<<<<< HEAD
 theme: kmom02                      # The name of your custom theme
-=======
-theme: dbwebb                       # The name of your custom theme
->>>>>>> 02c4516 (Example portfolio now working with validation and on student server)
 themes_url: ~                       # Pico will try to guess the URL to the themes dir of your installation;
                                     #     If this fails, override it here. Example: https://example.com/pico/themes/
 theme_config:                       # Additional theme-specific config
@@ -28,11 +20,7 @@ twig_config:                        # Twig template engine config
     autoescape: html                # Let Twig escape variables by default
     strict_variables: false         # If set to true, Twig will bail out when unset variables are being used
     charset: utf-8                  # The charset used by Twig templates
-<<<<<<< HEAD
     debug: true                        # Enable Twig's debug mode
-=======
-    debug: ~                        # Enable Twig's debug mode
->>>>>>> 02c4516 (Example portfolio now working with validation and on student server)
     cache: false                    # Enable Twig template caching by specifying a path to a writable directory
     auto_reload: false              # Recompile Twig templates whenever the source code changes
 

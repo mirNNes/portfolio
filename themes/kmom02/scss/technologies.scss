@@ -1,0 +1,45 @@
+.landing-page {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1.96rem;
+    margin-bottom: 1.96rem;
+    padding: 1rem;
+}
+
+
+.landing-page h1 {
+    grid-column: 1 / -1; 
+    justify-self: center;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+.box {
+    border: 1px solid #ccc;
+    padding: 1.96rem;
+    text-align: center;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+
+.box:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+
+.box-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+@media screen and (max-width: 768px) {
+    .landing-page {
+        grid-template-columns: 1fr; 
+    }
+}

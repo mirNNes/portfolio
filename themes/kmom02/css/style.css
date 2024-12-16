@@ -12743,6 +12743,11 @@ body {
   font-family: "Courier New", Courier, monospace;
 }
 
+p {
+  font-size: 1.4em;
+  margin-bottom: 1.96rem;
+}
+
 * {
   box-sizing: border-box;
   border: 0 none;
@@ -12916,4 +12921,101 @@ pre code {
   background: transparent;
   overflow-x: auto;
   line-height: 1.4;
+}
+
+.landing-page {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.96rem;
+  margin-bottom: 1.96rem;
+  padding: 1rem;
+}
+
+.landing-page h1 {
+  grid-column: 1/-1;
+  justify-self: center;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.box {
+  border: 1px solid #ccc;
+  padding: 1.96rem;
+  text-align: center;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.box:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+.box-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media screen and (max-width: 768px) {
+  .landing-page {
+    grid-template-columns: 1fr;
+  }
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 1200px;
+  justify-content: flex-start; /* Lägg till detta för att justera innehållet åt vänster */
+  gap: 1rem;
+  margin: 0 auto; /* Centrera container på sidan */
+}
+
+.sidebar {
+  flex: 1 1 20%;
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  max-height: 500px; /* Sätt en maxhöjd på sidobaren */
+  overflow-y: auto; /* Lägg till scroll om innehållet är för stort för höjden */
+}
+
+.content {
+  flex: 3 1 70%; /* Innehållsdelen får ta upp 70% av bredden */
+  background: #fff;
+  padding: 1rem;
+  margin-left: 1rem;
+}
+
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column; /* För att stapla sidobar och innehåll på mindre skärmar */
+  }
+  .sidebar {
+    display: none; /* Dölj sidobaren på små skärmar */
+  }
+  .content {
+    margin-left: 0;
+    flex: 1 1 100%; /* Innehållet tar upp hela bredden */
+  }
+}
+/* Grundläggande länkstil */
+.sidebar a {
+  color: #fff; /* Länkfärg sätts till vitt */
+  text-decoration: none; /* Ta bort understrykning */
+}
+
+/* Förhindrar att färgen ändras när länken är i fokus (dvs när man klickar på den) */
+.sidebar a:focus,
+.sidebar a:active {
+  color: #fff; /* Förblir vit när länk är aktiv eller i fokus */
+  outline: none; /* Tar bort fokuseringsramen (kan justeras om du vill behålla den) */
+}
+
+/* Förhindrar att färgen ändras vid hover */
+.sidebar a:hover {
+  color: #fff; /* Förblir vit vid hover */
+  text-decoration: underline; /* Valfritt: du kan lägga till understrykning vid hover */
 }

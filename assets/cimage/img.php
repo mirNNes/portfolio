@@ -185,11 +185,9 @@ $allowHotlinking = getConfig('allow_hotlinking', true);
 $hotlinkingWhitelist = getConfig('hotlinking_whitelist', array());
 
 $serverName  = isset($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : null;
-<<<<<<< HEAD
+
 $referer     = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "";
-=======
-$referer     = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null;
->>>>>>> 02c4516 (Example portfolio now working with validation and on student server)
+
 $refererHost = parse_url($referer, PHP_URL_HOST);
 
 if (!$allowHotlinking) {
@@ -225,7 +223,6 @@ verbose("referer host = $refererHost");
 
 
 /**
-<<<<<<< HEAD
  * Setting windows2wsl from config.
  */
 $windows2wsl = getConfig("windows2wsl", false);
@@ -236,8 +233,6 @@ if ($windows2wsl) {
 
 
 /**
-=======
->>>>>>> 02c4516 (Example portfolio now working with validation and on student server)
  * Create the class for the image.
  */
 $CImage = getConfig('CImage', 'CImage');
@@ -340,11 +335,9 @@ $srcImage = urldecode(get('src'))
     or errorPage('Must set src-attribute.', 404);
 
 // Get settings for src-alt as backup image
-<<<<<<< HEAD
+
 $srcAltImage = urldecode(get('src-alt', null) || "");
-=======
-$srcAltImage = urldecode(get('src-alt', null));
->>>>>>> 02c4516 (Example portfolio now working with validation and on student server)
+
 $srcAltConfig = getConfig('src_alt', null);
 if (empty($srcAltImage)) {
     $srcAltImage = $srcAltConfig;

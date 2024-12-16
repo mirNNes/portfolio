@@ -11,6 +11,10 @@ $fa-font-path: 'node_modules/@fortawesome/fontawesome-free/webfonts';
 @use 'container' as container;
 @use 'blockquotes' as blockquotes;
 @use 'code' as code;
+@use 'technologies' as technologies;
+@use 'technology' as technology;
+
+
 
 @import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Play:wght@400;700&display=swap');
 
