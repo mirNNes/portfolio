@@ -6,6 +6,6 @@ debug.log
 .vscode
 .DS_Store
 .log
-me/
+#me/
 captain_clegg/
 .correcter.bash
