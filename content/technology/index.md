@@ -1,7 +1,7 @@
 ---
 Title: Teknologier
 Description: This is our tech page.
-Template: Technologies
+Template: technologies
 techs: 
     - name: CSS
       class: css
