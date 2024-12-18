@@ -12968,54 +12968,63 @@ pre code {
   flex-wrap: wrap;
   width: 90%;
   max-width: 1200px;
-  justify-content: flex-start; /* Lägg till detta för att justera innehållet åt vänster */
+  justify-content: flex-start;
   gap: 1rem;
-  margin: 0 auto; /* Centrera container på sidan */
+  margin: 0 auto;
 }
 
 .sidebar {
   flex: 1 1 20%;
-  background: #333;
+  background: #630606;
   color: #fff;
   padding: 1rem;
-  max-height: 500px; /* Sätt en maxhöjd på sidobaren */
-  overflow-y: auto; /* Lägg till scroll om innehållet är för stort för höjden */
+  max-height: 500px;
+  overflow-y: auto;
 }
 
 .content {
-  flex: 3 1 70%; /* Innehållsdelen får ta upp 70% av bredden */
+  flex: 3 1 70%;
   background: #fff;
   padding: 1rem;
   margin-left: 1rem;
 }
 
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 5px solid #010101;
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 @media (max-width: 768px) {
   .flex-container {
-    flex-direction: column; /* För att stapla sidobar och innehåll på mindre skärmar */
+    flex-direction: column;
   }
   .sidebar {
-    display: none; /* Dölj sidobaren på små skärmar */
+    display: none;
   }
   .content {
     margin-left: 0;
-    flex: 1 1 100%; /* Innehållet tar upp hela bredden */
+    flex: 1 1 100%;
   }
 }
-/* Grundläggande länkstil */
 .sidebar a {
-  color: #fff; /* Länkfärg sätts till vitt */
-  text-decoration: none; /* Ta bort understrykning */
+  color: #fff;
+  text-decoration: none;
 }
 
-/* Förhindrar att färgen ändras när länken är i fokus (dvs när man klickar på den) */
 .sidebar a:focus,
 .sidebar a:active {
-  color: #fff; /* Förblir vit när länk är aktiv eller i fokus */
-  outline: none; /* Tar bort fokuseringsramen (kan justeras om du vill behålla den) */
+  color: #fff;
+  outline: none;
 }
 
-/* Förhindrar att färgen ändras vid hover */
 .sidebar a:hover {
-  color: #fff; /* Förblir vit vid hover */
-  text-decoration: underline; /* Valfritt: du kan lägga till understrykning vid hover */
+  color: #fff;
+  text-decoration: underline;
 }

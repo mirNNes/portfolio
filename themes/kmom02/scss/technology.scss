@@ -10,7 +10,7 @@
 
 .sidebar {
     flex: 1 1 20%;
-    background: #333;
+    background: #630606;
     color: #fff;
     padding: 1rem;
     max-height: 500px; 
@@ -22,6 +22,17 @@
     background: #fff;
     padding: 1rem;
     margin-left: 1rem;
+}
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+    border-top: 5px solid #010101;
+    width: 100%; 
+    padding: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 @media (max-width: 768px) {
