@@ -1,0 +1,50 @@
+// variables-dark.scss
+
+// Typsnittsinställningar - använd bara Press Start 2P
+$font-family-dark: 'Press Start 2P', cursive;
+$font-size-base: 16px; // Grundläggande typsnittsstorlek
+$font-color-dark: #070706; // Neon-grön text för kontrast
+
+// Bakgrundsfärger
+$background-color-dark: #817f7f; // Mörkgrå bakgrund för hela sidan
+$background-color-secondary: #2b2b2b; // Sekundär bakgrundsfärg för sektioner eller kort
+
+// Knappar och länkar
+$button-background-color: #333333; // Basfärg för knappar
+$button-hover-color: #444444; // Färg när man hovrar över knappar
+$link-color: #ffff00; // Neon-gröna länkar
+$link-hover-color: #33ff33; // Ljusare grön för hover-effekt
+
+// Kantlinjer och skuggor
+$border-color-dark: #555555; // Diskret kantfärg
+$box-shadow-dark: 0px 4px 8px rgba(0, 0, 0, 0.8); // Mjuk skugga för djup
+
+// Accentfärger
+$accent-color: #ff9500; // Orange för knappar eller viktiga delar
+$error-color: #ff0000; // Röd för varningar eller felmeddelanden
+
+// ===========================
+// Variabler - Typsnitt
+// ===========================
+$font-family-press-start: 'Press Start 2P', cursive; // Retro-stil
+
+// ===========================
+// Variabler - Färger
+// ===========================
+$background-color-dark: #817f7f;
+$font-color-dark: #050404;
+$background-color-secondary: #2b2b2b;
+
+// ===========================
+// Variabler - Knappar och länkar
+// ===========================
+$button-background-color: #333333;
+$button-hover-color: #444444;
+$link-color: #ffff00;
+$link-hover-color: #33ff33;
+
+// ===========================
+// Variabler - Accentfärger
+// ===========================
+$accent-color: #ff9500;
+$error-color: #ff0000;

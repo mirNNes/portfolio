@@ -6,10 +6,16 @@
     "example": "example"
   },
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "stylelint \"**/*.scss\"",
-    "style": "sass --load-path=node_modules kmom02/scss/style.scss kmom02/css/style.css --no-source-map",
-    "style-min": "sass --load-path=node_modules kmom02/scss/style.scss kmom02/css/style.min.css --no-source-map --style compressed",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "sass --load-path=node_modules kmom02/scss/style.scss:kmom02/css/style.css kmom02/scss/style-dark.scss:kmom02/css/style-dark.css --no-source-map --watch",
+    "watch-min": "sass --load-path=node_modules kmom02/scss/style.scss:kmom02/css/style.min.css kmom02/scss/style-dark.scss:kmom02/css/style-dark.min.css --no-source-map --watch --style compressed",
+    "style": "npm run style-light && npm run style-dark",
+    "style-min": "npm run style-light-min && npm run style-dark-min",
+    "style-dark": "sass --load-path=node_modules kmom02/scss/style-dark.scss kmom02/css/style-dark.css --no-source-map",
+    "style-dark-min": "sass --load-path=node_modules kmom02/scss/style-dark.scss kmom02/css/style-dark.min.css --no-source-map --style compressed",
+    "style-light": "sass --load-path=node_modules kmom02/scss/style.scss kmom02/css/style.css --no-source-map",
+    "style-light-min": "sass --load-path=node_modules kmom02/scss/style.scss kmom02/css/style.min.css --no-source-map --style compressed"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +29,6 @@
     "stylelint-config-sass-guidelines": "^12.1.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.7.1"
+    "@fortawesome/fontawesome-free": "^6.7.2"
   }
 }

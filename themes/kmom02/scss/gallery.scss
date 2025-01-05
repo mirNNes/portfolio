@@ -1,0 +1,45 @@
+.container {
+    max-width: 1200px; /* Ställ in en maxbredd för allt innehåll */
+    margin: 0 auto; /* Centrera innehållet */
+    padding: 0 15px; /* Lite sidomarginal för mindre skärmar */
+    box-sizing: border-box;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tre kolumner på desktop */
+    gap: 10px; /* Avstånd mellan bilderna */
+    width: 100%; /* Gör galleriet lika brett som containern */
+}
+
+.gallery img {
+    width: 100%; /* Gör bilderna responsiva */
+    height: auto; /* Bevara bildens proportioner */
+    transition: transform 0.3s; /* Skapa en övergång för zoom-effekten */
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Litet zoom vid hover */
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr; /* En kolumn på mobil */
+    }
+}
+
+.embed-container {
+    position: relative;
+    width: 100%; /* Full bredd */
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    margin-top: 20px; /* Avstånd mellan galleri och video */
+}
+
+.embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

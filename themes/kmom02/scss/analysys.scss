@@ -1,0 +1,51 @@
+/* Allmänt */
+body {
+    font-family: 'Parkisans', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+main.analysis-content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid Layout */
+.analysis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Kort för varje analys */
+.analysis-item {
+    background: #f4f4f4;
+    border: 2px solid #14191e; /* Synlig kantlinje */
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none; /* Tar bort understrykning från länkar */
+    color: inherit; /* Behåller textfärg */
+}
+
+.analysis-item:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+/* Rubrik för varje kort */
+.analysis-item h2 {
+    font-size: 1.5em;
+    color: #b30009;
+    margin-bottom: 15px;
+}
+

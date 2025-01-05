@@ -1,0 +1,175 @@
+@use './variables-dark' as *; // Justera sökvägen om nödvändigt
+
+
+* {
+    box-sizing: border-box;
+    margin: 0.6em;
+    padding: 0;
+    border: 0 none;
+}
+
+html, body {
+    height: 100%;
+    background-color: $background-color-dark; // Variabel från SCSS
+    color: $font-color-dark; // Neon-grön text
+    font-family: $font-family-dark; // Monospace för retro känsla
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $background-color-dark;
+    color: #060606; // Vit text för hög kontrast
+}
+
+.header, .footer {
+    flex: 0 0 auto;
+}
+
+.header, .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: $background-color-secondary; // Mörkgrå bakgrund
+    color: #e8e8e8; // Ljusare textfärg
+    border-bottom: 3px solid $border-color-dark; // Avskiljning
+}
+
+.title, .logo {
+    padding: 2em 2em 2em 0;
+}
+
+.title * {
+    color: #cfcfcf; // Mild kontrast
+    text-shadow: 1px 1px 2px #000000; // Retro-stil
+}
+
+.title p {
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+/* Responsivt */
+@media (max-width: 767px) {
+    .title, .logo {
+        padding: 1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .title {
+        min-width: 50%;
+    }
+    .logo {
+        max-width: 15%;
+    }
+}
+
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: $background-color-secondary; // Sekundär bakgrund
+    border-top: 5px solid $border-color-dark; // Avskiljning
+}
+
+.footer a {
+    color: $link-color; // Accentfärg
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: $link-hover-color; // Hover-effekt
+}
+
+.footer .social {
+    font-size: 2rem;
+    margin-right: 20px;
+}
+
+.footer .social i {
+    color: $accent-color; // Neon-cyan för retro-stil
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* ===========================
+   Listor och Typografi
+=========================== */
+ol, ul {
+    padding-left: 1.5em;
+}
+
+.hidden {
+    display: none !important;
+}
+
+p, td, th, li, dd {
+    text-align: justify;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    line-height: 1.6; // Bättre läsbarhet
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.6em;
+    font-weight: bold;
+    color: #0c0b0b;
+    text-shadow: 1px 1px 2px #000000; // Retro-känsla
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px; 
+}
+
+
+.nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: $accent-color; // Hover-effekt
+}
+
+.nav li.active a {
+    color: $link-color; // Aktiv länkfärg
+}
+
+button {
+    background-color: $button-background-color; // Mörk bakgrund
+    color: $font-color-dark; // Textfärg
+    border: 2px solid $accent-color; // Kantfärg
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: $font-family-dark; // Monospace
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: $accent-color; // Hover-bakgrund
+    color: #000000; // Textfärg vid hover
+}
+
+.parkinsans-custom {
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}

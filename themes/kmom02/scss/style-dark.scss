@@ -1,0 +1,62 @@
+@use '@fortawesome/fontawesome-free/scss/fontawesome' as fa;
+@use '@fortawesome/fontawesome-free/scss/brands' as brands;
+@use '@fortawesome/fontawesome-free/scss/solid' as solid;
+@use '@fortawesome/fontawesome-free/scss/regular' as regular;
+
+$fa-font-path: 'node_modules/@fortawesome/fontawesome-free/webfonts';
+
+@use 'normalize.css/normalize' as normalize;
+@use 'variables-dark' as vars;
+@use 'typography' as typo;
+@use 'container-dark' as container;
+@use 'blockquotes' as blockquotes;
+@use 'code' as code;
+@use 'technologies' as technologies;
+@use 'technology' as technology;
+@use 'analys-dark' as analys;
+@use 'analysys' as analysys;
+@use 'gallery' as gallery;
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+
+body {
+    font-family: vars.$font-family-dark;
+    font-size: vars.$font-size-base;
+    color: vars.$font-color-dark;
+    background-color: vars.$background-color-dark;
+}
+
+.section {
+    background-color: vars.$background-color-secondary;
+    padding: 20px;
+    border: 1px solid vars.$border-color-dark;
+    box-shadow: vars.$box-shadow-dark;
+}
+
+.button {
+    background-color: vars.$button-background-color;
+    color: vars.$font-color-dark;
+    border: 1px solid vars.$border-color-dark;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+        background-color: vars.$button-hover-color;
+    }
+}
+
+a {
+    color: vars.$link-color;
+    text-decoration: none;
+
+    &:hover {
+        color: vars.$link-hover-color;
+    }
+}
+  

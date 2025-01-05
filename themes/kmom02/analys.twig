@@ -1,0 +1,21 @@
+{% include 'incl/header.twig' %}
+
+<nav>
+    {% include 'incl/nav.twig' %}
+</nav>
+
+<main class="analysis-main-content" role="main">
+    <div class="analysis-content-container">
+        <section class="analysis-content">
+            <h1>{{ title }}</h1>
+            <article>
+                {{ content }}
+            </article>
+        </section>
+    </div>
+</main>
+
+<footer class="analysis-footer">
+    {% include 'incl/footer.twig' %}
+</footer>
+</html>

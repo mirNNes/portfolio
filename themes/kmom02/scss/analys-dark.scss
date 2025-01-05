@@ -1,0 +1,86 @@
+/* Allmänt */
+body {
+    font-family: 'Parkisans', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Mörk bakgrund */
+    color: #e0e0e0; /* Ljus text för kontrast */
+}
+
+/* Huvudinnehåll */
+.analysis-main-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #1e1e1e; /* Mörkare kortbakgrund */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Mjukare skugga */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Innehållscontainer */
+.analysis-content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+/* Titel */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #151414; /* Accentfärg för rubriken */
+    border-bottom: 2px solid #333; /* Mörkare linje */
+    padding-bottom: 10px;
+}
+
+/* Textstyling */
+p, li {
+    font-size: 1.1em;
+    margin: 10px 0;
+    text-align: justify;
+    color: #141212; /* Neutralare textfärg */
+}
+
+a {
+    color: #81d4fa; /* Ljusblå länkar */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #40c4ff; /* Ljusare blå för hover */
+}
+
+/* Tabell */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #1e1e1e; /* Mörk tabellbakgrund */
+    color: #060505; /* Ljus text */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #333; /* Mörkare kant */
+}
+
+td img {
+    width: 20px;
+    height: auto;
+}
+
+/* Footer */
+.analysis-footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #999; /* Ljusare grå */
+}
