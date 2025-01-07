@@ -3,7 +3,7 @@ Title: Galleri
 Description: This is our gallery page.
 ---
 
-Mirnes Mrsos galleri
+Mirnes  galleri
 ==========================
 
 <div class="container">
@@ -57,8 +57,7 @@ Mirnes Mrsos galleri
                  alt="Bmw m3">
         </a>
     </div>
-<div class="embed-container">
-    <iframe src="https://www.youtube.com/embed/JQSvPN9E47o" frameborder="0" allowfullscreen></iframe>
-</div>
-
+    <div class="embed-container">
+        <iframe src="https://www.youtube.com/embed/JQSvPN9E47o" frameborder="0" allowfullscreen></iframe>
+    </div>
 </div>

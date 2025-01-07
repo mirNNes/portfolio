@@ -1,5 +1,5 @@
 ---
-Logo: assets/img/fks.png
+logo: image/fks.png
 Tagline: Mirnes portfolio.
 Social:
     - title: Link till sidans github repo.

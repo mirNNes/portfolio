@@ -1,51 +1,67 @@
-/* Allmänt */
-body {
-    font-family: 'Parkisans', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
-}
-
-main.analysis-content {
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
     max-width: 1200px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    justify-content: flex-start; 
+    gap: 1rem;
+    margin: 0 auto; 
 }
 
-/* Grid Layout */
-.analysis-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+.sidebar {
+    flex: 1 1 20%;
+    background: #630606;
+    color: #fff;
+    padding: 1rem;
+    max-height: 500px; 
+    overflow-y: auto; 
 }
 
-/* Kort för varje analys */
-.analysis-item {
-    background: #f4f4f4;
-    border: 2px solid #14191e; /* Synlig kantlinje */
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-decoration: none; /* Tar bort understrykning från länkar */
-    color: inherit; /* Behåller textfärg */
+.content {
+    flex: 3 1 70%; 
+    background: #fff;
+    padding: 1rem;
+    margin-left: 1rem;
+}
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+    border-top: 5px solid #010101;
+    width: 100%; 
+    padding: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-.analysis-item:hover {
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-    transform: scale(1.02);
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column; 
+    }
+
+    .sidebar {
+        display: none; 
+    }
+
+    .content {
+        margin-left: 0;
+        flex: 1 1 100%; 
+    }
 }
 
-/* Rubrik för varje kort */
-.analysis-item h2 {
-    font-size: 1.5em;
-    color: #b30009;
-    margin-bottom: 15px;
+.sidebar a {
+    color: #fff; 
+    text-decoration: none; 
 }
 
+.sidebar a:focus,
+.sidebar a:active {
+    color: #fff; 
+    outline: none; 
+}
+
+.sidebar a:hover {
+    color: #fff; 
+    text-decoration: underline; 
+}
