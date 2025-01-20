@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js">
-
+<html class="no-js" lang="sv">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -17,12 +16,18 @@
     <link rel="icon" href="{{ theme_url }}/../shared/img/favicon.ico">
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
 
+    <link rel="preload" href="{{ theme_url }}/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="{{ theme_url }}/css/style.css">
+    </noscript>
+
     <link rel="stylesheet" href="{{ theme_url }}/css/mobile-menu.css" type="text/css" />
+    
     {% if config.session.theme == "dark" %}
-    <link rel="stylesheet" href="{{ theme_url }}/css/style-dark.css" type="text/css" />
-{% else %}
-    <link rel="stylesheet" href="{{ theme_url }}/css/style.css" type="text/css" />
-{% endif %}
+        <link rel="stylesheet" href="{{ theme_url }}/css/style-dark.css" type="text/css" />
+    {% else %}
+        <link rel="stylesheet" href="{{ theme_url }}/css/style.css" type="text/css" />
+    {% endif %}
 </head>
 <body class="parkinsans-custom">
     <!-- Your content here -->

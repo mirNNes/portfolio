@@ -4,8 +4,8 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #f2f2f2; /* Ljusa upp bakgrunden för bättre kontrast */
+    color: #333; /* Mörkare textfärg */
 }
 
 /* Huvudinnehåll */
@@ -19,13 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
-
-/* Innehållscontainer */
-.analysis-content-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    border: 1px solid #ddd; /* Tydligare gräns för enhetlighet */
 }
 
 /* Titel */
@@ -33,9 +27,13 @@ h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
     text-align: center;
-    color: #560303;
+    color: #b00000; /* Livfull röd nyans */
     border-bottom: 2px solid #eee;
     padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 2em; /* Tydlig hierarki med mindre storlek än h1 */
 }
 
 /* Textstyling */
@@ -50,8 +48,10 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+a:hover, a:focus {
+    color: #ff4500; /* Komplementär färg vid hover */
     text-decoration: underline;
+    outline: 2px solid #ff4500; /* För att ge bättre fokusindikation */
 }
 
 /* Tabell */
@@ -65,11 +65,6 @@ th, td {
     padding: 10px;
     text-align: left;
     border: 1px solid #ddd;
-}
-
-td img {
-    width: 20px;
-    height: auto;
 }
 
 /* Footer */

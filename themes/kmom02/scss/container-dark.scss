@@ -1,175 +1,163 @@
 @use './variables-dark' as *; // Justera sökvägen om nödvändigt
 
-
+// Allmänna inställningar
 * {
     box-sizing: border-box;
-    margin: 0.6em;
-    padding: 0;
     border: 0 none;
+    margin: 0; // Ställ in till 0 för att undvika scrollbars
+    padding: 0;
 }
 
 html, body {
     height: 100%;
-    background-color: $background-color-dark; // Variabel från SCSS
-    color: $font-color-dark; // Neon-grön text
-    font-family: $font-family-dark; // Monospace för retro känsla
+    font-family: 'Arial', sans-serif; // Definiera teckensnitt här om det inte redan är i variabler
+    color: $text-color; // Använd konsekvent textfärg
+
+    // Dölj horisontell scrollbar
+    overflow-x: hidden;
 }
 
+// Avstånd för listor
+ol, ul {
+    padding-left: 1.5em;
+}
+
+// Placering
 body {
     display: flex;
     flex-direction: column;
+    min-height: 100vh; // Se till att body sträcker sig över hela höjden
 }
 
 .main {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: $background-color-dark;
-    color: #060606; // Vit text för hög kontrast
+    justify-content: center; // Centrera horisontellt
+    align-items: center; // Centrera vertikalt
+    flex-direction: column; // Stapla vertikalt
+    background-color: $main-background-color; // Konsekvent bakgrundsfärg
+    flex-grow: 1; // Låt main ta upp överbliven höjd
 }
 
-.header, .footer {
-    flex: 0 0 auto;
-}
-
+// Header
 .header, .site-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em;
-    background-color: $background-color-secondary; // Mörkgrå bakgrund
-    color: #e8e8e8; // Ljusare textfärg
-    border-bottom: 3px solid $border-color-dark; // Avskiljning
+    justify-content: space-between; // Justerar utrymmet mellan element
+    align-items: center; // Centrerar vertikalt
+    padding: $main-padding; // Använd variabel för padding
+    background-color: $header-color; // Kontrastfärg för header
+    color: white; // Konsekvent textfärg
+    width: 100%; // Se till att headern sträcker sig över hela bredden
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Valfritt: lägg till en skugga för djup
+    font-size: 8px; // Ändra fontstorleken till 8px
 }
 
+// Navigation
+.nav {
+    display: flex; // Viktigt för att visa länkarna på rad
+    list-style: none; // Ta bort punkter från listor
+    margin-left: auto; // Justera till höger
+}
+
+.nav li {
+    margin: 0 15px; // Lägg till horisontella marginaler mellan länkarna
+}
+
+.nav a {
+    color: $link-color; // Använd variabel för navlänk färg
+    text-decoration: none;
+    font-size: 14px; 
+}
+
+.nav a:hover {
+    color: $link-hover-color; // Hover-färg
+}
+
+.nav li.active a {
+    color: $active-link-color; // Aktiv länk färg
+}
+
+// Titel och logotyp
 .title, .logo {
-    padding: 2em 2em 2em 0;
+    padding: 3em 3em 3em 0; // Justera padding
+    max-width: 100%; // Förhindra att titeln/logo överskrider bredden
+    display: flex; // Använd flex för centrerad inriktning
+    align-items: center; // Vertical alignment
+}
+
+.logo img {
+    max-height: 50px; // Begränsa logans höjd
+    margin-right: 20px; // Marginal mellan logotyp och navigering
+}
+
+// Responsiv design
+@media (max-width: 767px) {
+    .title, .logo {
+        padding: 1em 1em 1em 0;
+        justify-content: center; // Centrera innehållet
+        max-width: 100%; // Se till att titeln/logotypen inte överskrider bredden
+    }
+    
+    .logo {
+        max-width: 20%; // Justera logons bredd
+    }
 }
 
 .title * {
-    color: #cfcfcf; // Mild kontrast
-    text-shadow: 1px 1px 2px #000000; // Retro-stil
+    color: #f6f2f2; // Konsekvent textfärg
 }
 
 .title p {
     font-style: italic;
-    font-size: 1.2em;
 }
 
-/* Responsivt */
-@media (max-width: 767px) {
-    .title, .logo {
-        padding: 1em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .title {
-        min-width: 50%;
-    }
-    .logo {
-        max-width: 15%;
-    }
-}
-
-
+// Footer
 .footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1em;
-    background-color: $background-color-secondary; // Sekundär bakgrund
-    border-top: 5px solid $border-color-dark; // Avskiljning
+    border-top: 5px solid $footer-border-color; // Använd variabel för border
+    margin-top: 1em; // Standardmargin
+    width: 100%; // Se till att footern sträcker sig över hela bredden
 }
 
+// Footer-länkar
 .footer a {
-    color: $link-color; // Accentfärg
+    color: $link-color; // Använd variabel för länkfärg
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
 .footer a:hover {
-    color: $link-hover-color; // Hover-effekt
+    color: $link-hover-color; // Hover-färg
 }
 
 .footer .social {
-    font-size: 2rem;
+    font-size: $footer-social-icon-size; // Använd variabel för ikonstorlek
     margin-right: 20px;
 }
 
 .footer .social i {
-    color: $accent-color; // Neon-cyan för retro-stil
-    margin-left: 10px;
+    color: $social-icon-color; // Använd variabel för social ikonfärg
+    margin-left: $footer-social-icon-margin; // Använd variabel för margin
     vertical-align: middle;
 }
 
-/* ===========================
-   Listor och Typografi
-=========================== */
-ol, ul {
-    padding-left: 1.5em;
-}
-
-.hidden {
-    display: none !important;
-}
-
+// Textformattering
 p, td, th, li, dd {
     text-align: justify;
     overflow-wrap: break-word;
-    word-wrap: break-word;
-    line-height: 1.6; // Bättre läsbarhet
 }
 
+// Rubriker
 h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 0.6em;
-    font-weight: bold;
-    color: #0c0b0b;
-    text-shadow: 1px 1px 2px #000000; // Retro-känsla
+    margin-bottom: $main-margin; // Använd variabel för bottom margin
+    font-weight: bold; // Enhetlig teckensnittsvikt
+    color: $text-color; // Konsekvent textfärg
 }
 
+// Bilder
 img {
-    max-width: 100%;
-    height: auto;
-    max-height: 400px; 
-}
-
-
-.nav a {
-    color: #e0e0e0;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.nav a:hover {
-    color: $accent-color; // Hover-effekt
-}
-
-.nav li.active a {
-    color: $link-color; // Aktiv länkfärg
-}
-
-button {
-    background-color: $button-background-color; // Mörk bakgrund
-    color: $font-color-dark; // Textfärg
-    border: 2px solid $accent-color; // Kantfärg
-    padding: 10px 20px;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-family: $font-family-dark; // Monospace
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-button:hover {
-    background-color: $accent-color; // Hover-bakgrund
-    color: #000000; // Textfärg vid hover
-}
-
-.parkinsans-custom {
-    font-family: "Parkinsans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+    max-width: 100%; // Resiza i responsiv layout
+    height: auto; // Bevara proportioner
+    max-height: 400px; // Kontrollera om detta skapar något överflöd, justera vid behov
 }

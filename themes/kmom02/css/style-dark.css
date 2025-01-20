@@ -10788,21 +10788,26 @@ p {
 
 * {
   box-sizing: border-box;
-  margin: 0.6em;
-  padding: 0;
   border: 0 none;
+  margin: 0;
+  padding: 0;
 }
 
 html, body {
   height: 100%;
-  background-color: #817f7f;
-  color: #050404;
-  font-family: "Press Start 2P", cursive;
+  font-family: "Arial", sans-serif;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+ol, ul {
+  padding-left: 1.5em;
 }
 
 body {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .main {
@@ -10811,11 +10816,7 @@ body {
   align-items: center;
   flex-direction: column;
   background-color: #817f7f;
-  color: #060606;
-}
-
-.header, .footer {
-  flex: 0 0 auto;
+  flex-grow: 1;
 }
 
 .header, .site-header {
@@ -10823,54 +10824,80 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1em;
-  background-color: #2b2b2b;
-  color: #e8e8e8;
-  border-bottom: 3px solid #555555;
+  background-color: #444444;
+  color: white;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 8px;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+  margin-left: auto;
+}
+
+.nav li {
+  margin: 0 15px;
+}
+
+.nav a {
+  color: #ffff00;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav a:hover {
+  color: #33ff33;
+}
+
+.nav li.active a {
+  color: #ff4500;
 }
 
 .title, .logo {
-  padding: 2em 2em 2em 0;
+  padding: 3em 3em 3em 0;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
 }
 
+.logo img {
+  max-height: 50px;
+  margin-right: 20px;
+}
+
+@media (max-width: 767px) {
+  .title, .logo {
+    padding: 1em 1em 1em 0;
+    justify-content: center;
+    max-width: 100%;
+  }
+  .logo {
+    max-width: 20%;
+  }
+}
 .title * {
-  color: #cfcfcf;
-  text-shadow: 1px 1px 2px #000000;
+  color: #f6f2f2;
 }
 
 .title p {
   font-style: italic;
-  font-size: 1.2em;
 }
 
-/* Responsivt */
-@media (max-width: 767px) {
-  .title, .logo {
-    padding: 1em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .title {
-    min-width: 50%;
-  }
-  .logo {
-    max-width: 15%;
-  }
-}
 .footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1em;
-  background-color: #2b2b2b;
-  border-top: 5px solid #555555;
+  border-top: 5px solid #444444;
+  margin-top: 1em;
+  width: 100%;
 }
 
 .footer a {
   color: #ffff00;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
 .footer a:hover {
@@ -10878,82 +10905,31 @@ body {
 }
 
 .footer .social {
-  font-size: 2rem;
+  font-size: 20px;
   margin-right: 20px;
 }
 
 .footer .social i {
-  color: #ff9500;
+  color: #ffffff;
   margin-left: 10px;
   vertical-align: middle;
-}
-
-/* ===========================
-   Listor och Typografi
-=========================== */
-ol, ul {
-  padding-left: 1.5em;
-}
-
-.hidden {
-  display: none !important;
 }
 
 p, td, th, li, dd {
   text-align: justify;
   overflow-wrap: break-word;
-  word-wrap: break-word;
-  line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 0.6em;
+  margin-bottom: 1em;
   font-weight: bold;
-  color: #0c0b0b;
-  text-shadow: 1px 1px 2px #000000;
+  color: #ffffff;
 }
 
 img {
   max-width: 100%;
   height: auto;
   max-height: 400px;
-}
-
-.nav a {
-  color: #e0e0e0;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.nav a:hover {
-  color: #ff9500;
-}
-
-.nav li.active a {
-  color: #ffff00;
-}
-
-button {
-  background-color: #333333;
-  color: #050404;
-  border: 2px solid #ff9500;
-  padding: 10px 20px;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-family: "Press Start 2P", cursive;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-button:hover {
-  background-color: #ff9500;
-  color: #000000;
-}
-
-.parkinsans-custom {
-  font-family: "Parkinsans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
 }
 
 /* Blockquote */
@@ -10996,7 +10972,7 @@ pre code {
 .landing-page {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.96rem;
+  gap: 1.96rem; /* Konstant mellanrum */
   margin-bottom: 1.96rem;
   padding: 1rem;
 }
@@ -11013,24 +10989,24 @@ pre code {
   border: 1px solid #ccc;
   padding: 1.96rem;
   text-align: center;
-  background-color: #fff;
+  background-color: #fff; /* Enhetlig bakgrundsfärg på boxar */
   transition: all 0.3s ease;
   border-radius: 8px;
 }
 
 .box:hover {
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Tydlig hover-effekt */
   transform: scale(1.02);
 }
 
 .box-link {
   text-decoration: none;
-  color: inherit;
+  color: inherit; /* Enhetlig textfärg */
 }
 
 @media screen and (max-width: 768px) {
   .landing-page {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* En kolumn på mobil */
   }
 }
 .flex-container {
@@ -11045,18 +11021,20 @@ pre code {
 
 .sidebar {
   flex: 1 1 20%;
-  background: #630606;
-  color: #fff;
+  background: #630606; /* Kontrastfärg för sidebar */
+  color: #fff; /* Vit färg för text */
   padding: 1rem;
   max-height: 500px;
   overflow-y: auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Lätt skugga för djup */
 }
 
 .content {
   flex: 3 1 70%;
-  background: #fff;
+  background: #ffffff; /* Enhetlig bakgrund för innehåll */
   padding: 1rem;
   margin-left: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Lätt skugga för djup */
 }
 
 .footer {
@@ -11064,27 +11042,29 @@ pre code {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-top: 5px solid #010101;
+  border-top: 5px solid #010101; /* Tydlig gräns */
   width: 100%;
   padding: 0.5rem;
   margin-top: 0;
   margin-bottom: 0;
 }
 
+/* Media queries för responsivitet */
 @media (max-width: 768px) {
   .flex-container {
     flex-direction: column;
   }
   .sidebar {
-    display: none;
+    display: none; /* Döljer sidebar på små skärmar */
   }
   .content {
-    margin-left: 0;
+    margin-left: 0; /* Tar bort vänstermarginal på små skärmar */
     flex: 1 1 100%;
   }
 }
+/* Länkstil för sidebar */
 .sidebar a {
-  color: #fff;
+  color: #fff; /* Vit färg för länktext */
   text-decoration: none;
 }
 
@@ -11095,7 +11075,7 @@ pre code {
 }
 
 .sidebar a:hover {
-  color: #fff;
+  color: #ff4500; /* Komplementär färg för hover, ger bättre kontrast */
   text-decoration: underline;
 }
 
@@ -11185,19 +11165,20 @@ td img {
   color: #999; /* Ljusare grå */
 }
 
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
+/* Grid layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* två kolumner */
+  grid-template-rows: auto 1fr auto;
+  gap: 1rem;
   width: 90%;
   max-width: 1200px;
-  justify-content: flex-start;
-  gap: 1rem;
   margin: 0 auto;
 }
 
 .sidebar {
-  flex: 1 1 20%;
-  background: #630606;
+  grid-column: 1; /* Placera sidebar i första kolumnen */
+  background: #630606; /* Kontrastfärg för sidebar */
   color: #fff;
   padding: 1rem;
   max-height: 500px;
@@ -11205,56 +11186,39 @@ td img {
 }
 
 .content {
-  flex: 3 1 70%;
+  grid-column: 2; /* Placera content i andra kolumnen */
   background: #fff;
   padding: 1rem;
-  margin-left: 1rem;
 }
 
 .footer {
+  grid-column: 1/-1; /* Sträcker sig över båda kolumnerna */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   border-top: 5px solid #010101;
-  width: 100%;
   padding: 0.5rem;
   margin-top: 0;
   margin-bottom: 0;
 }
 
 @media (max-width: 768px) {
-  .flex-container {
-    flex-direction: column;
+  .grid-container {
+    grid-template-columns: 1fr; /* En kolumn layout på små skärmar */
   }
   .sidebar {
-    display: none;
+    display: none; /* Döljer sidebar för små skärmar */
   }
   .content {
-    margin-left: 0;
-    flex: 1 1 100%;
+    grid-column: 1; /* Placera content i första kolumnen */
   }
 }
-.sidebar a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.sidebar a:focus,
-.sidebar a:active {
-  color: #fff;
-  outline: none;
-}
-
-.sidebar a:hover {
-  color: #fff;
-  text-decoration: underline;
-}
-
+/* Galleriinställningar */
 .container {
-  max-width: 1200px; /* Ställ in en maxbredd för allt innehåll */
+  max-width: 1200px; /* Maxbredd för allt innehåll */
   margin: 0 auto; /* Centrera innehållet */
-  padding: 0 15px; /* Lite sidomarginal för mindre skärmar */
+  padding: 0 15px; /* Sidomarginal */
   box-sizing: border-box;
 }
 
@@ -11268,7 +11232,7 @@ td img {
 .gallery img {
   width: 100%; /* Gör bilderna responsiva */
   height: auto; /* Bevara bildens proportioner */
-  transition: transform 0.3s; /* Skapa en övergång för zoom-effekten */
+  transition: transform 0.3s; /* Zoom-effekt */
 }
 
 .gallery img:hover {
@@ -11299,7 +11263,7 @@ td img {
 body {
   font-family: "Press Start 2P", cursive;
   font-size: 16px;
-  color: #050404;
+  color: #070706;
   background-color: #817f7f;
 }
 
@@ -11312,7 +11276,7 @@ body {
 
 .button {
   background-color: #333333;
-  color: #050404;
+  color: #070706;
   border: 1px solid #555555;
   padding: 10px 20px;
   text-transform: uppercase;

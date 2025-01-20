@@ -3,7 +3,7 @@ Title: Galleri
 Description: This is our gallery page.
 ---
 
-Mirnes  galleri
+Mirnes galleri
 ==========================
 
 <div class="container">
@@ -58,6 +58,6 @@ Mirnes  galleri
         </a>
     </div>
     <div class="embed-container">
-        <iframe src="https://www.youtube.com/embed/JQSvPN9E47o" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/JQSvPN9E47o" frameborder="0" allowfullscreen title="YouTube Video: Galleri"></iframe>
     </div>
 </div>

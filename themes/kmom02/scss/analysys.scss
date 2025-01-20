@@ -1,16 +1,17 @@
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
+/* Grid layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* två kolumner */
+    grid-template-rows: auto 1fr auto; 
+    gap: 1rem;
     width: 90%;
     max-width: 1200px;
-    justify-content: flex-start; 
-    gap: 1rem;
     margin: 0 auto; 
 }
 
 .sidebar {
-    flex: 1 1 20%;
-    background: #630606;
+    grid-column: 1; /* Placera sidebar i första kolumnen */
+    background: #630606; /* Kontrastfärg för sidebar */
     color: #fff;
     padding: 1rem;
     max-height: 500px; 
@@ -18,50 +19,33 @@
 }
 
 .content {
-    flex: 3 1 70%; 
+    grid-column: 2; /* Placera content i andra kolumnen */
     background: #fff;
-    padding: 1rem;
-    margin-left: 1rem;
+    padding: 1rem; 
 }
+
 .footer {
+    grid-column: 1 / -1; /* Sträcker sig över båda kolumnerna */
     display: flex;
     flex-direction: row;
     justify-content: space-between; 
     align-items: center;
     border-top: 5px solid #010101;
-    width: 100%; 
     padding: 0.5rem;
     margin-top: 0;
     margin-bottom: 0;
 }
 
 @media (max-width: 768px) {
-    .flex-container {
-        flex-direction: column; 
+    .grid-container {
+        grid-template-columns: 1fr; /* En kolumn layout på små skärmar */
     }
 
     .sidebar {
-        display: none; 
+        display: none; /* Döljer sidebar för små skärmar */
     }
 
     .content {
-        margin-left: 0;
-        flex: 1 1 100%; 
+        grid-column: 1; /* Placera content i första kolumnen */
     }
-}
-
-.sidebar a {
-    color: #fff; 
-    text-decoration: none; 
-}
-
-.sidebar a:focus,
-.sidebar a:active {
-    color: #fff; 
-    outline: none; 
-}
-
-.sidebar a:hover {
-    color: #fff; 
-    text-decoration: underline; 
 }

@@ -1,7 +1,8 @@
+/* Galleriinställningar */
 .container {
-    max-width: 1200px; /* Ställ in en maxbredd för allt innehåll */
+    max-width: 1200px; /* Maxbredd för allt innehåll */
     margin: 0 auto; /* Centrera innehållet */
-    padding: 0 15px; /* Lite sidomarginal för mindre skärmar */
+    padding: 0 15px; /* Sidomarginal */
     box-sizing: border-box;
 }
 
@@ -15,7 +16,7 @@
 .gallery img {
     width: 100%; /* Gör bilderna responsiva */
     height: auto; /* Bevara bildens proportioner */
-    transition: transform 0.3s; /* Skapa en övergång för zoom-effekten */
+    transition: transform 0.3s; /* Zoom-effekt */
 }
 
 .gallery img:hover {

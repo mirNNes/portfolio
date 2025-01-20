@@ -2,22 +2,22 @@
     <div>
         <p>
             "Bortsett från resultatet, fungerade allt som det skulle." 
-            </p>
-                       <p>
-                                Olle Dopping
-                              </p>
+        </p>
+        <p>
+            Olle Dopping
+        </p>
     </div>
     <div class="social">
         <!-- Laddar sociala länkar från Twig -->
         {% for social in pages["_meta"].meta.social %}
-        <a href="{{ social.url }}" title="{{ social.title }}" role="button">
+        <a href="{{ social.url }}" title="{{ social.title }}" role="button" aria-label="{{ social.title }}">
             <i class="{{ social.icon }}" aria-hidden="true"></i>
             <span class="sr-only">{{ social.title }}</span>
         </a>
         {% endfor %}
         
         <!-- Canvas BTH länk -->
-        <a href="https://bth.instructure.com" target="_blank" title="Canvas BTH">
+        <a href="https://bth.instructure.com" target="_blank" title="Canvas BTH" role="button" aria-label="Canvas BTH">
             <i class="fas fa-university"></i> 
         </a>
     </div>

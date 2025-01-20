@@ -10793,15 +10793,16 @@ p {
   padding: 0;
 }
 
+html, body {
+  height: 100%;
+  font-family: "Arial", sans-serif;
+  color: #333;
+}
+
 ol, ul {
   padding-left: 1.5em;
 }
 
-html, body {
-  height: 100%;
-}
-
-/* Placement */
 body {
   display: flex;
   flex-direction: column;
@@ -10811,22 +10812,18 @@ body {
   display: flex;
   justify-content: center; /* Centrera horisontellt */
   align-items: center; /* Centrera vertikalt */
-  flex-direction: column; /* Om du har flera element och vill att de ska staplas vertikalt */
-  background-color: #fff;
+  flex-direction: column; /* Stapla vertikalt */
+  background-color: #f8f8f8; /* Konsekvent bakgrundsfärg */
 }
 
-.header, .footer {
-  flex: 0 0 auto;
-}
-
-/* Header */
 .header, .site-header {
   display: flex;
   justify-content: space-between;
   padding: 1em;
+  background-color: #630404;
+  color: white;
 }
 
-/* Title */
 .title, .logo {
   padding: 3em 3em 3em 0;
 }
@@ -10834,9 +10831,9 @@ body {
 @media (max-width: 767px) {
   .title, .logo {
     padding: 1em 1em 1em 0;
-    display: flex; /* Gör det till ett flex-container */
-    justify-content: center; /* Centrera innehållet horisontellt */
-    align-items: center; /* Centrera innehållet vertikalt */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .title {
     min-width: 50%;
@@ -10853,72 +10850,63 @@ body {
   font-style: italic;
 }
 
-/* Footer */
 .footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   border-top: 5px solid #010101;
+  margin-top: 1em;
 }
 
 .footer a {
-  color: #ff0000; /* Ändra till önskad färg */
+  color: #fdf8f8;
   text-decoration: none;
+}
+
+.footer a:hover {
+  color: #f3efed;
 }
 
 .footer .social {
   font-size: 2rem;
-  margin-right: 20px; /* Justera värdet efter behov */
+  margin-right: 20px;
 }
 
 .footer .social i {
-  color: #0e0d0d; /* Ändra till önskad färg */
-  margin-left: 10px; /* Lägg till lite avstånd mellan ikoner om det behövs */
-  vertical-align: middle; /* Justera vertikalt om det behövs */
+  color: #0e0d0d;
+  margin-left: 10px;
+  vertical-align: middle;
 }
 
 p, td, th, li, dd {
   text-align: justify;
   overflow-wrap: break-word;
-  word-wrap: break-word;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.6em;
   font-weight: bold;
+  color: #333;
 }
 
 img {
   max-width: 100%;
-  height: auto; /* Bevarar bildens proportioner */
+  height: auto;
   max-height: 400px;
 }
 
-.header {
-  background-color: #630404; /* Grön färg */
-  color: white; /* Vit textfärg */
-  padding: 0em; /* Lägg till lite padding för att ge utrymme */
-}
-
 .nav a {
-  color: #fdf8f8; /* Ändra till önskad färg */
-  text-decoration: none; /* Tar bort understrykning */
+  color: #fdf8f8;
+  text-decoration: none;
 }
 
 .nav a:hover {
-  color: #f3efed; /* Ändra färg vid hover */
+  color: #f3efed;
 }
 
 .nav li.active a {
-  color: #f2f8f2; /* Färg för den aktiva sidan, ändra till önskad färg */
-}
-
-.parkinsans-custom {
-  font-family: "Parkinsans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+  color: #f2f8f2;
 }
 
 /* Blockquote */
@@ -10961,7 +10949,7 @@ pre code {
 .landing-page {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.96rem;
+  gap: 1.96rem; /* Konstant mellanrum */
   margin-bottom: 1.96rem;
   padding: 1rem;
 }
@@ -10978,24 +10966,24 @@ pre code {
   border: 1px solid #ccc;
   padding: 1.96rem;
   text-align: center;
-  background-color: #fff;
+  background-color: #fff; /* Enhetlig bakgrundsfärg på boxar */
   transition: all 0.3s ease;
   border-radius: 8px;
 }
 
 .box:hover {
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Tydlig hover-effekt */
   transform: scale(1.02);
 }
 
 .box-link {
   text-decoration: none;
-  color: inherit;
+  color: inherit; /* Enhetlig textfärg */
 }
 
 @media screen and (max-width: 768px) {
   .landing-page {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* En kolumn på mobil */
   }
 }
 .flex-container {
@@ -11010,18 +10998,20 @@ pre code {
 
 .sidebar {
   flex: 1 1 20%;
-  background: #630606;
-  color: #fff;
+  background: #630606; /* Kontrastfärg för sidebar */
+  color: #fff; /* Vit färg för text */
   padding: 1rem;
   max-height: 500px;
   overflow-y: auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Lätt skugga för djup */
 }
 
 .content {
   flex: 3 1 70%;
-  background: #fff;
+  background: #ffffff; /* Enhetlig bakgrund för innehåll */
   padding: 1rem;
   margin-left: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Lätt skugga för djup */
 }
 
 .footer {
@@ -11029,27 +11019,29 @@ pre code {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-top: 5px solid #010101;
+  border-top: 5px solid #010101; /* Tydlig gräns */
   width: 100%;
   padding: 0.5rem;
   margin-top: 0;
   margin-bottom: 0;
 }
 
+/* Media queries för responsivitet */
 @media (max-width: 768px) {
   .flex-container {
     flex-direction: column;
   }
   .sidebar {
-    display: none;
+    display: none; /* Döljer sidebar på små skärmar */
   }
   .content {
-    margin-left: 0;
+    margin-left: 0; /* Tar bort vänstermarginal på små skärmar */
     flex: 1 1 100%;
   }
 }
+/* Länkstil för sidebar */
 .sidebar a {
-  color: #fff;
+  color: #fff; /* Vit färg för länktext */
   text-decoration: none;
 }
 
@@ -11060,23 +11052,24 @@ pre code {
 }
 
 .sidebar a:hover {
-  color: #fff;
+  color: #ff4500; /* Komplementär färg för hover, ger bättre kontrast */
   text-decoration: underline;
 }
 
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
+/* Grid layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* två kolumner */
+  grid-template-rows: auto 1fr auto;
+  gap: 1rem;
   width: 90%;
   max-width: 1200px;
-  justify-content: flex-start;
-  gap: 1rem;
   margin: 0 auto;
 }
 
 .sidebar {
-  flex: 1 1 20%;
-  background: #630606;
+  grid-column: 1; /* Placera sidebar i första kolumnen */
+  background: #630606; /* Kontrastfärg för sidebar */
   color: #fff;
   padding: 1rem;
   max-height: 500px;
@@ -11084,60 +11077,42 @@ pre code {
 }
 
 .content {
-  flex: 3 1 70%;
+  grid-column: 2; /* Placera content i andra kolumnen */
   background: #fff;
   padding: 1rem;
-  margin-left: 1rem;
 }
 
 .footer {
+  grid-column: 1/-1; /* Sträcker sig över båda kolumnerna */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   border-top: 5px solid #010101;
-  width: 100%;
   padding: 0.5rem;
   margin-top: 0;
   margin-bottom: 0;
 }
 
 @media (max-width: 768px) {
-  .flex-container {
-    flex-direction: column;
+  .grid-container {
+    grid-template-columns: 1fr; /* En kolumn layout på små skärmar */
   }
   .sidebar {
-    display: none;
+    display: none; /* Döljer sidebar för små skärmar */
   }
   .content {
-    margin-left: 0;
-    flex: 1 1 100%;
+    grid-column: 1; /* Placera content i första kolumnen */
   }
 }
-.sidebar a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.sidebar a:focus,
-.sidebar a:active {
-  color: #fff;
-  outline: none;
-}
-
-.sidebar a:hover {
-  color: #fff;
-  text-decoration: underline;
-}
-
 /* Allmänt */
 body {
   font-family: "Parkisans", sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #f2f2f2; /* Ljusa upp bakgrunden för bättre kontrast */
+  color: #333; /* Mörkare textfärg */
 }
 
 /* Huvudinnehåll */
@@ -11151,13 +11126,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-
-/* Innehållscontainer */
-.analysis-content-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  border: 1px solid #ddd; /* Tydligare gräns för enhetlighet */
 }
 
 /* Titel */
@@ -11165,9 +11134,13 @@ h1 {
   font-size: 2.5em;
   margin-bottom: 10px;
   text-align: center;
-  color: #560303;
+  color: #b00000; /* Livfull röd nyans */
   border-bottom: 2px solid #eee;
   padding-bottom: 10px;
+}
+
+h2 {
+  font-size: 2em; /* Tydlig hierarki med mindre storlek än h1 */
 }
 
 /* Textstyling */
@@ -11183,6 +11156,7 @@ a {
 }
 
 a:hover {
+  color: #ff4500; /* Komplementär färg vid hover */
   text-decoration: underline;
 }
 
@@ -11199,11 +11173,6 @@ th, td {
   border: 1px solid #ddd;
 }
 
-td img {
-  width: 20px;
-  height: auto;
-}
-
 /* Footer */
 .analysis-footer {
   text-align: center;
@@ -11212,10 +11181,11 @@ td img {
   color: #666;
 }
 
+/* Galleriinställningar */
 .container {
-  max-width: 1200px; /* Ställ in en maxbredd för allt innehåll */
+  max-width: 1200px; /* Maxbredd för allt innehåll */
   margin: 0 auto; /* Centrera innehållet */
-  padding: 0 15px; /* Lite sidomarginal för mindre skärmar */
+  padding: 0 15px; /* Sidomarginal */
   box-sizing: border-box;
 }
 
@@ -11229,7 +11199,7 @@ td img {
 .gallery img {
   width: 100%; /* Gör bilderna responsiva */
   height: auto; /* Bevara bildens proportioner */
-  transition: transform 0.3s; /* Skapa en övergång för zoom-effekten */
+  transition: transform 0.3s; /* Zoom-effekt */
 }
 
 .gallery img:hover {

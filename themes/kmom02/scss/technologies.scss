@@ -1,11 +1,10 @@
 .landing-page {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
-    gap: 1.96rem;
+    gap: 1.96rem; /* Konstant mellanrum */
     margin-bottom: 1.96rem;
     padding: 1rem;
 }
-
 
 .landing-page h1 {
     grid-column: 1 / -1; 
@@ -15,31 +14,27 @@
     margin-bottom: 1rem;
 }
 
-
 .box {
     border: 1px solid #ccc;
     padding: 1.96rem;
     text-align: center;
-    background-color: #fff;
+    background-color: #fff; /* Enhetlig bakgrundsfärg på boxar */
     transition: all 0.3s ease;
     border-radius: 8px;
 }
 
-
 .box:hover {
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Tydlig hover-effekt */
     transform: scale(1.02);
 }
 
-
 .box-link {
     text-decoration: none;
-    color: inherit;
+    color: inherit; /* Enhetlig textfärg */
 }
-
 
 @media screen and (max-width: 768px) {
     .landing-page {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr; /* En kolumn på mobil */
     }
 }

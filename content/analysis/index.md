@@ -11,7 +11,6 @@ analys:
       class: 03_design_principles
 ---
 
-Analys
-==========================
+# Analys
 
 Välkommen till min analyssektion. Här presenterar jag tre rapporter som belyser olika aspekter av webbdesign: färgval, laddningstider och designprinciper. Tryck på respektive panel för att läsa mer.

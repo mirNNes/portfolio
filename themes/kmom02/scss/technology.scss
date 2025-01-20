@@ -10,48 +10,53 @@
 
 .sidebar {
     flex: 1 1 20%;
-    background: #630606;
-    color: #fff;
+    background: #630606; /* Kontrastfärg för sidebar */
+    color: #fff; /* Vit färg för text */
     padding: 1rem;
     max-height: 500px; 
     overflow-y: auto; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Lätt skugga för djup */
 }
 
 .content {
     flex: 3 1 70%; 
-    background: #fff;
+    background: #ffffff; /* Enhetlig bakgrund för innehåll */
     padding: 1rem;
     margin-left: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Lätt skugga för djup */
 }
+
 .footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between; 
     align-items: center;
-    border-top: 5px solid #010101;
+    border-top: 5px solid #010101; /* Tydlig gräns */
     width: 100%; 
     padding: 0.5rem;
     margin-top: 0;
     margin-bottom: 0;
 }
 
+/* Media queries för responsivitet */
 @media (max-width: 768px) {
     .flex-container {
         flex-direction: column; 
     }
 
     .sidebar {
-        display: none; 
+        display: none;  /* Döljer sidebar på små skärmar */
     }
 
     .content {
-        margin-left: 0;
+        margin-left: 0;  /* Tar bort vänstermarginal på små skärmar */
         flex: 1 1 100%; 
     }
 }
 
+/* Länkstil för sidebar */
 .sidebar a {
-    color: #fff; 
+    color: #fff; /* Vit färg för länktext */
     text-decoration: none; 
 }
 
@@ -62,6 +67,6 @@
 }
 
 .sidebar a:hover {
-    color: #fff; 
+    color: #ff4500; /* Komplementär färg för hover, ger bättre kontrast */
     text-decoration: underline; 
 }
